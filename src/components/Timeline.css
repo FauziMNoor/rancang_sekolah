@@ -1,0 +1,454 @@
+/* ===== GENDER TOGGLE ===== */
+.gender-toggle-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.gender-toggle {
+  display: flex;
+  gap: 0;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 4px;
+}
+
+.gender-btn {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 7px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  background: transparent;
+  color: var(--text-muted);
+}
+
+.gender-btn.ikhwan.active {
+  background: rgba(59, 130, 246, 0.2);
+  color: #60a5fa;
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.15);
+}
+
+.gender-btn.akhwat.active {
+  background: rgba(244, 114, 182, 0.2);
+  color: #f472b6;
+  box-shadow: 0 0 12px rgba(244, 114, 182, 0.15);
+}
+
+.gender-btn:hover:not(.active) {
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* ===== SEMESTER CARD HEADER ===== */
+.semester-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+
+.semester-gender-labels {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.semester-gender-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.25rem 0.7rem;
+  border-radius: 20px;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-muted);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.semester-gender-label.ikhwan.active {
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.25);
+}
+
+.semester-gender-label.akhwat.active {
+  background: rgba(244, 114, 182, 0.15);
+  color: #f472b6;
+  border: 1px solid rgba(244, 114, 182, 0.25);
+}
+
+/* Card border accent per gender */
+.semester-card.gender-ikhwan {
+  border-top: 2px solid rgba(59, 130, 246, 0.3);
+}
+
+.semester-card.gender-akhwat {
+  border-top: 2px solid rgba(244, 114, 182, 0.3);
+}
+
+/* ===== TIMELINE SECTION ===== */
+.timeline-section {
+  width: 100%;
+}
+
+.timeline-container {
+  position: relative;
+  padding: 2rem 0;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    transparent calc(50% - 1px),
+    rgba(245, 158, 11, 0.08) calc(50% - 1px),
+    rgba(245, 158, 11, 0.08) calc(50% + 1px),
+    transparent calc(50% + 1px),
+    transparent 100%);
+  background-attachment: fixed;
+}
+
+/* ===== TIMELINE YEAR ===== */
+.timeline-year {
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+/* Year Badge */
+.year-badge {
+  position: relative;
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  white-space: nowrap;
+}
+
+/* ===== PHASE SECTION ===== */
+.phase-section {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-sm);
+}
+
+.phase-label {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: var(--text-primary);
+}
+
+.phase-description {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ===== SEMESTERS ===== */
+.semesters-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.semester-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.semester-card:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  border-color: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+.semester-badge {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.semester-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.semester-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.semester-items li {
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.item-emoji {
+  font-size: 1rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.item-text {
+  flex: 1;
+}
+
+/* ===== OUTPUT SECTION ===== */
+.output-section {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.output-label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.output-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.output-tag {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+}
+
+.output-tag:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* ===== LOAD CHART ===== */
+.load-chart {
+  margin-top: 1.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.load-chart-title {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.75rem;
+}
+
+.load-row {
+  position: relative;
+  margin-bottom: 0.55rem;
+}
+
+.load-label-col {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 0.2rem;
+}
+
+.load-bar-track {
+  position: relative;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.load-bar-track:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.load-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.load-pct-inline {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.85);
+  pointer-events: none;
+}
+
+.load-ref-popup {
+  margin-top: 0.5rem;
+  padding: 0.85rem 1rem;
+  background: rgba(10, 14, 26, 0.92);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-left: 3px solid;
+  border-radius: 6px;
+  animation: slideDown 0.2s ease;
+  backdrop-filter: blur(12px);
+}
+
+.load-ref-header {
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.load-ref-text {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 0.6rem;
+}
+
+.load-ref-close {
+  font-size: 0.7rem;
+  padding: 2px 10px;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.load-ref-close:hover {
+  background: rgba(255,255,255,0.08);
+  color: var(--text-primary);
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .timeline-container {
+    background: linear-gradient(90deg, 
+      transparent 0%, 
+      transparent calc(30px - 1px),
+      rgba(245, 158, 11, 0.06) calc(30px - 1px),
+      rgba(245, 158, 11, 0.06) calc(30px + 1px),
+      transparent calc(30px + 1px),
+      transparent 100%);
+  }
+
+  .semesters-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-year {
+    margin-left: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline-container {
+    background: linear-gradient(90deg, 
+      transparent 0%, 
+      transparent calc(20px - 1px),
+      rgba(245, 158, 11, 0.05) calc(20px - 1px),
+      rgba(245, 158, 11, 0.05) calc(20px + 1px),
+      transparent calc(20px + 1px),
+      transparent 100%);
+  }
+
+  .year-badge {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .phase-section {
+    padding: 1rem;
+  }
+
+  .phase-label {
+    font-size: 1rem;
+  }
+
+  .phase-description {
+    font-size: 0.8rem;
+  }
+
+  .semester-card {
+    padding: 1rem;
+  }
+
+  .semester-title {
+    font-size: 0.9rem;
+  }
+
+  .semester-items li {
+    font-size: 0.8rem;
+  }
+
+  .output-section {
+    padding: 1rem;
+  }
+
+  .output-label {
+    font-size: 0.9rem;
+  }
+
+  .output-tag {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .timeline-year {
+    margin-left: 60px;
+    margin-bottom: 3rem;
+  }
+}

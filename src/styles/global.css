@@ -1,0 +1,119 @@
+:root {
+  --bg-primary: #0a0e1a;
+  --bg-secondary: #111827;
+  --bg-card: rgba(17, 24, 39, 0.7);
+  --glass: rgba(255, 255, 255, 0.04);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --accent-gold: #f59e0b;
+  --accent-emerald: #10b981;
+  --accent-sky: #38bdf8;
+  --accent-violet: #a78bfa;
+  --accent-rose: #fb7185;
+  --accent-orange: #fb923c;
+  --accent-amber: #f59e0b;
+  --accent-blue: #3b82f6;
+  --accent-purple: #a855f7;
+  --k10-color: #f59e0b;
+  --k11-color: #38bdf8;
+  --k12-color: #fb7185;
+  --glow-gold: 0 0 40px rgba(245, 158, 11, 0.15);
+  --glow-emerald: 0 0 40px rgba(16, 185, 129, 0.15);
+  --glow-sky: 0 0 40px rgba(56, 189, 248, 0.15);
+  --glow-violet: 0 0 40px rgba(167, 139, 250, 0.15);
+  --radius: 16px;
+  --radius-sm: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -40px) scale(1.05);
+  }
+  66% {
+    transform: translate(-20px, 30px) scale(0.95);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: var(--glow-gold), inset 0 0 60px rgba(245, 158, 11, 0.05);
+  }
+  50% {
+    box-shadow: 0 0 60px rgba(245, 158, 11, 0.25), inset 0 0 80px rgba(245, 158, 11, 0.08);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== REVEAL ANIMATION ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

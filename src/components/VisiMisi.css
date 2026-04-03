@@ -1,0 +1,501 @@
+/* ===== VISI SECTION ===== */
+.visi-container {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), rgba(251, 113, 133, 0.05));
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.visi-container::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.1), transparent);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.visi-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-rose));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  z-index: 1;
+}
+
+.visi-statement {
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--text-primary);
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.visi-pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.visi-pillar {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.visi-pillar:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.pillar-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.visi-pillar h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.visi-pillar p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ===== MISI & GOALS TWO COLUMN LAYOUT ===== */
+.misi-goals-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* ===== MISI SECTION ===== */
+.misi-container {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.05), rgba(16, 185, 129, 0.02));
+  border: 1px solid rgba(16, 185, 129, 0.15);
+  border-top: 3px solid var(--accent-emerald);
+  border-radius: var(--radius);
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.misi-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, var(--accent-emerald), transparent);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-icon {
+  font-size: 1.5rem;
+}
+
+.section-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.misi-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.misi-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.misi-bullet {
+  font-size: 1.5rem;
+  color: var(--accent-emerald);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: -0.2rem;
+}
+
+.misi-text h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 0.4rem 0;
+}
+
+.misi-text p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ===== GOALS SECTION ===== */
+.goals-container {
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.05), rgba(56, 189, 248, 0.02));
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  border-top: 3px solid var(--accent-sky);
+  border-radius: var(--radius);
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.goals-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, var(--accent-sky), transparent);
+}
+
+.goals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.goal-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.goal-badge {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(56, 189, 248, 0.1);
+  border-radius: 8px;
+}
+
+.goal-content h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 0.6rem 0;
+}
+
+.goal-targets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.goal-targets li {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.goal-targets li::before {
+  content: '◆';
+  position: absolute;
+  left: 0;
+  color: var(--accent-sky);
+  font-size: 0.6rem;
+}
+
+/* ===== QUOTE SECTION ===== */
+.quote-section {
+  text-align: center;
+  padding: 2.5rem 2rem;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.05), rgba(139, 92, 246, 0.05));
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  border-radius: var(--radius);
+  position: relative;
+  overflow: hidden;
+}
+
+.quote-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.1), transparent);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.closing-quote {
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--text-secondary);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+  position: relative;
+  z-index: 1;
+}
+
+.closing-quote-arabic {
+  font-family: 'Amiri', 'Traditional Arabic', serif;
+  font-size: 1.5rem;
+  color: var(--accent-gold);
+  text-align: center;
+  direction: rtl;
+  margin-bottom: 1.5rem;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.bayt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  line-height: 2;
+}
+
+.shatr {
+  white-space: nowrap;
+}
+
+.fasilah {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 1.2rem;
+}
+
+.closing-quote-source {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--accent-gold);
+  opacity: 0.7;
+  margin-top: 1rem;
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+}
+
+.visi-pillar-hint {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.visi-pillar:hover .visi-pillar-hint {
+  opacity: 1;
+}
+
+/* ===== VISI PILLAR MODAL ===== */
+.visi-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+}
+
+.visi-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  background: var(--bg-primary);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.visi-modal-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 3px solid;
+  position: relative;
+}
+
+.visi-modal-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.visi-modal-header h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 0.4rem 0;
+}
+
+.visi-modal-header p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.visi-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.visi-modal-close:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--text-primary);
+}
+
+.visi-modal-body {
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.visi-modal-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.visi-programs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.visi-program-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 8px;
+  padding: 0.9rem 1rem;
+  transition: all 0.2s ease;
+}
+
+.visi-program-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.visi-program-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.visi-program-detail {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .misi-goals-wrapper {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .visi-container {
+    padding: 1.5rem;
+  }
+
+  .visi-statement {
+    font-size: 1rem;
+  }
+
+  .visi-title {
+    font-size: 1.2rem;
+  }
+
+  .section-title {
+    font-size: 1.1rem;
+  }
+
+  .misi-container,
+  .goals-container {
+    padding: 1.5rem;
+  }
+
+  .misi-text h4,
+  .goal-content h4 {
+    font-size: 0.9rem;
+  }
+
+  .misi-text p,
+  .goal-targets li {
+    font-size: 0.8rem;
+  }
+}

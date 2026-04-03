@@ -1,0 +1,106 @@
+.container {
+    padding: 24px 32px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.empty {
+    padding: 40px;
+    text-align: center;
+    color: var(--text-muted);
+}
+
+.title {
+    font-size: 24px;
+    font-family: var(--font-serif);
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+}
+
+.tableWrapper {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.table th,
+.table td {
+    padding: 16px;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.thFeature {
+    font-weight: 600;
+    color: var(--text-primary);
+    background: var(--bg-secondary);
+    width: 40%;
+}
+
+.thCompetitor {
+    font-weight: 600;
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+    text-align: center;
+}
+
+.thOurs {
+    font-weight: 700;
+    color: var(--accent-gold);
+    background: rgba(201, 168, 76, 0.1);
+    text-align: center;
+}
+
+.tr:last-child td {
+    border-bottom: none;
+}
+
+.tr:hover {
+    background: var(--bg-glass-light);
+}
+
+.tdFeature {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.tdValue {
+    text-align: center;
+}
+
+.tdOurs {
+    background: rgba(201, 168, 76, 0.05);
+}
+
+.check {
+    color: var(--text-secondary);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.cross {
+    color: var(--text-muted);
+    opacity: 0.3;
+    font-size: 16px;
+}
+
+.checkOurs {
+    color: var(--accent-gold);
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(201, 168, 76, 0.5);
+}

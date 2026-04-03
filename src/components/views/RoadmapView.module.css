@@ -1,0 +1,115 @@
+.container {
+    padding: 24px 32px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.empty {
+    padding: 40px;
+    text-align: center;
+    color: var(--text-muted);
+}
+
+.title {
+    font-size: 24px;
+    font-family: var(--font-serif);
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+}
+
+.roadmapLine {
+    position: relative;
+    padding-left: 30px;
+}
+
+.roadmapLine::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 9px;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--accent-gold), rgba(201, 168, 76, 0.1));
+}
+
+.phaseNode {
+    position: relative;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.phaseNode:last-child {
+    margin-bottom: 0;
+}
+
+.dot {
+    position: absolute;
+    left: -27px;
+    top: 6px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--bg-card);
+    border: 3px solid var(--accent-gold);
+    box-shadow: 0 0 10px rgba(201, 168, 76, 0.6);
+}
+
+.contentBox {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.contentBox:hover {
+    border-color: rgba(201, 168, 76, 0.5);
+    background: var(--bg-glass-light);
+}
+
+.phaseHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.phaseName {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent-blue);
+    background: rgba(79, 142, 247, 0.15);
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.phaseYear {
+    font-family: var(--font-serif);
+    font-weight: italic;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.phaseFocus {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.phaseTarget {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}

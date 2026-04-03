@@ -1,0 +1,162 @@
+/* =============================================
+   RANCANG SEKOLAH — Global Design System
+   ============================================= */
+
+:root {
+  /* Color Palette — Deep Blue + Gold */
+  --bg-primary: #0a0e1a;
+  --bg-secondary: #0f1528;
+  --bg-card: #141c35;
+  --bg-glass: rgba(20, 28, 53, 0.7);
+  --bg-glass-light: rgba(255, 255, 255, 0.04);
+
+  --accent-gold: #c9a84c;
+  --accent-gold-light: #e8c875;
+  --accent-gold-dim: rgba(201, 168, 76, 0.15);
+  --accent-blue: #4f8ef7;
+  --accent-blue-light: #7aabff;
+  --accent-blue-dim: rgba(79, 142, 247, 0.12);
+  --accent-emerald: #34d399;
+  --accent-purple: #a78bfa;
+  --accent-rose: #fb7185;
+
+  --text-primary: #f0f4ff;
+  --text-secondary: #8b9cc8;
+  --text-muted: #4a5680;
+  --text-gold: #c9a84c;
+
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-glow: rgba(201, 168, 76, 0.3);
+  --border-blue: rgba(79, 142, 247, 0.25);
+
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --shadow-glow: 0 0 40px rgba(201, 168, 76, 0.12);
+  --shadow-blue: 0 0 40px rgba(79, 142, 247, 0.12);
+
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-secondary); }
+::-webkit-scrollbar-thumb { background: var(--text-muted); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-secondary); }
+
+/* ============ UTILITIES ============ */
+.font-serif { font-family: var(--font-serif); }
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--accent-gold-light), var(--accent-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-blue {
+  background: linear-gradient(135deg, var(--accent-blue-light), var(--accent-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-card {
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+}
+
+.glow-gold {
+  box-shadow: var(--shadow-glow);
+}
+
+.glow-blue {
+  box-shadow: var(--shadow-blue);
+}
+
+/* ============ BUTTONS ============ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-gold), #b8913e);
+  color: #0a0e1a;
+  box-shadow: 0 4px 20px rgba(201, 168, 76, 0.35);
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(201, 168, 76, 0.5);
+}
+
+.btn-secondary {
+  background: var(--bg-glass-light);
+  color: var(--text-primary);
+  border: 1px solid var(--border-subtle);
+}
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: var(--border-blue);
+  transform: translateY(-1px);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-secondary);
+  padding: 8px 16px;
+}
+.btn-ghost:hover {
+  color: var(--text-primary);
+  background: var(--bg-glass-light);
+}
+
+/* ============ NOISE OVERLAY ============ */
+#root::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.4;
+}
