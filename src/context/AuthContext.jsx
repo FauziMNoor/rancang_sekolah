@@ -8,7 +8,12 @@ export function AuthProvider({ children }) {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        // Cek session aktif secara real-time dari Supabase
+        // Kalau supabase tidak dikonfigurasi, skip auth
+        if (!supabase) {
+            setLoading(false)
+            return
+        }
+
         const initializeAuth = async () => {
             const { data: { session } } = await supabase.auth.getSession()
             setUser(session?.user ?? null)
@@ -17,7 +22,6 @@ export function AuthProvider({ children }) {
 
         initializeAuth()
 
-        // Mendengarkan perubahan status login (jika user login/logout dari tab lain)
         const { data: { subscription } } = supabase.auth.onAuthStateChange(
             (_event, session) => {
                 setUser(session?.user ?? null)
