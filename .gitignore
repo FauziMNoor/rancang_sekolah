@@ -17,6 +17,7 @@ dist-ssr
 # Build logs
 build-log.txt
 build_error.txt
+dev-log.txt
 
 # Editor directories and files
 .vscode/*
