@@ -47,7 +47,7 @@ export default function LoginPage() {
             {/* Logo */}
             <Link to="/" className={styles.logoLink}>
                 <span>🏫</span>
-                <span className="gradient-text" style={{ fontFamily: 'var(--font-serif)', fontWeight: 700, fontSize: '18px' }}>Rancang Sekolah</span>
+                <span className="gradient-text" style={{ fontFamily: 'var(--font-serif)', fontWeight: 700, fontSize: '18px' }}>BluePrint HSI Boarding School</span>
             </Link>
 
             <div className={styles.container}>
@@ -67,8 +67,8 @@ export default function LoginPage() {
                         </h1>
                         <p className={styles.subtitle}>
                             {isSignUp
-                                ? 'Buat akun gratis dan mulai merancang sekolah impian'
-                                : 'Masuk untuk melanjutkan rancangan sekolah Anda'}
+                                ? 'Buat akun gratis dan mulai membuat blueprint impian Anda'
+                                : 'Masuk untuk melanjutkan blueprint Anda'}
                         </p>
                     </div>
 

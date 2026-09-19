@@ -13,7 +13,8 @@ export function SettingsProvider({ children }) {
 
     // Muat setting dari localStorage bila ada
     useEffect(() => {
-        const savedSettings = localStorage.getItem('rancang_ai_settings')
+        const savedSettings = localStorage.getItem('hsi_blueprint_ai_settings')
+            || localStorage.getItem('rancang_ai_settings')
         if (savedSettings) {
             setSettings(JSON.parse(savedSettings))
         }
@@ -22,7 +23,7 @@ export function SettingsProvider({ children }) {
     const updateSettings = (newSettings) => {
         const merged = { ...settings, ...newSettings }
         setSettings(merged)
-        localStorage.setItem('rancang_ai_settings', JSON.stringify(merged))
+        localStorage.setItem('hsi_blueprint_ai_settings', JSON.stringify(merged))
     }
 
     const toggleSettings = () => {

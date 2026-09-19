@@ -34,7 +34,7 @@ export default function LandingPage() {
                 <div className={styles.navInner}>
                     <Link to="/" className={styles.logo}>
                         <span className={styles.logoIcon}>🏫</span>
-                        <span className="gradient-text" style={{ fontFamily: 'var(--font-serif)', fontSize: '20px', fontWeight: 700 }}>Rancang Sekolah</span>
+                        <span className="gradient-text" style={{ fontFamily: 'var(--font-serif)', fontSize: '20px', fontWeight: 700 }}>BluePrint HSI Boarding School</span>
                     </Link>
                     <div className={styles.navLinks}>
                         {user ? (
@@ -239,7 +239,7 @@ export default function LandingPage() {
                         <span className="gradient-text">Hari Ini Juga</span>
                     </h2>
                     <p style={{ color: 'var(--text-secondary)', maxWidth: 480, margin: '0 auto 32px', lineHeight: 1.7 }}>
-                        Bergabunglah dengan ratusan kepala sekolah dan konsultan pendidikan yang telah menggunakan Rancang Sekolah untuk merancang masa depan pendidikan Indonesia.
+                        Bergabunglah dengan ratusan kepala sekolah dan konsultan pendidikan yang telah menggunakan BluePrint HSI Boarding School untuk merancang masa depan pendidikan Indonesia.
                     </p>
                     <Link to={user ? '/dashboard' : '/login?mode=signup'} className="btn btn-primary" style={{ fontSize: '16px', padding: '16px 40px' }}>
                         Mulai Gratis Sekarang
@@ -250,7 +250,7 @@ export default function LandingPage() {
 
             {/* Footer */}
             <footer className={styles.footer}>
-                <span className="gradient-text" style={{ fontFamily: 'var(--font-serif)', fontWeight: 700 }}>Rancang Sekolah</span>
+                <span className="gradient-text" style={{ fontFamily: 'var(--font-serif)', fontWeight: 700 }}>BluePrint HSI Boarding School</span>
                 <span style={{ color: 'var(--text-muted)' }}>© 2026 · Dibuat dengan ❤️ untuk Pendidikan Indonesia</span>
             </footer>
         </div>

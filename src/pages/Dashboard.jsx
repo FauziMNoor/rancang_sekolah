@@ -112,7 +112,7 @@ export default function Dashboard() {
                 <div className={styles.topbarInner}>
                     <Link to="/" className={styles.logo}>
                         <span>🏫</span>
-                        <span className="gradient-text" style={{ fontFamily: 'var(--font-serif)', fontWeight: 700, fontSize: '18px' }}>Rancang Sekolah</span>
+                        <span className="gradient-text" style={{ fontFamily: 'var(--font-serif)', fontWeight: 700, fontSize: '18px' }}>BluePrint HSI Boarding School</span>
                     </Link>
                     <div className={styles.topbarRight}>
                         <div className={styles.userBadge}>
