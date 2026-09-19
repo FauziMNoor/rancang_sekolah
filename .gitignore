@@ -14,6 +14,10 @@ dist-ssr
 .env
 .env.*
 
+# Build logs
+build-log.txt
+build_error.txt
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
